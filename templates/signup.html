@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+
+                <h2 class="card-title mb-3">新規登録</h2>
+
+                <form 
+                    method="post" 
+                    action="{{ url_for('auth.signup') }}">
+                
+                    <input
+                        type="hidden"
+                        name="csrf_token"
+                        value="{{ csrf_token() }}">
+
+                    <div class="mb-3">
+                        <label class="form-label">ユーザー名</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            name="name"
+                            placeholder="ユーザー名を入力" 
+                            autocomplete="username"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">パスワード</label>
+                        <input 
+                            type="password" 
+                            class="form-control" 
+                            name="password"
+                            placeholder="パスワードを入力"
+                            autocomplete="new-password"
+                            required>
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success">
+                            <i class="bi bi-person-plus"></i> 登録
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="d-grid mt-3">
+            <a class="btn btn-outline-secondary"
+            href="{{ url_for('auth.login') }}">
+                <i class="bi bi-box-arrow-in-right"></i>
+                ログインへ
+            </a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

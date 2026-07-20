@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+
+        <div class="card shadow-sm">
+            <div class="card-body">
+
+                <h2 class="card-title mb-3">名前を登録する</h2>
+
+                <form 
+                    action="{{ url_for('members.add') }}"
+                    method="post"
+                    autocomplete="off">
+
+                    <input
+                        type="hidden"
+                        name="csrf_token"
+                        value="{{ csrf_token() }}">
+
+                    <div class="mb-3">
+                        <label class="form-label">名前</label>
+                        <input
+                            type="text" 
+                            class="form-control" 
+                            name="name" 
+                            placeholder="名前を入力" 
+                            autocomplete="name"
+                            required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">電話番号</label>
+                        <input
+                            type="tel"
+                            class="form-control"
+                            name="phone"
+                            placeholder="090-1234-5678"
+                            autocomplete="tel"
+                            inputmode="tel">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">メールアドレス</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            name="email"
+                            placeholder="sample@example.com"
+                            autocomplete="email"
+                            inputmode="email">
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="bi bi-plus-circle"></i> 登録
+                        </button>
+                    </div>
+                </form>
+            
+            </div>
+        </div>
+
+        <div class="d-grid mt-3">
+            <a class="btn btn-outline-secondary"
+                href="{{ url_for('members.list_members') }}">
+                <i class="bi bi-list"></i> 一覧を見る
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
