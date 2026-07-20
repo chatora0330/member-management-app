@@ -71,7 +71,7 @@ member-management-app/
 ### 1. リポジトリをクローン
 
 ```bash
-git clone https://github.com/<ユーザー名>/member-management-app.git
+git clone https://github.com/river0330mysterybook-dotcom/member-management-app.git
 cd member-management-app
 ```
 
