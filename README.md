@@ -123,23 +123,23 @@ http://127.0.0.1:5000
 
 ### ログイン画面
 
-![ログイン画面](images/login.png)
+![ログイン画面](images/members_login.png)
 
 ### 新規登録画面
 
-![新規登録画面](images/signup.png)
+![新規登録画面](images/members_signup.png)
 
 ### 一覧画面
 
-![一覧画面](images/list.png)
+![一覧画面](images/members_list.png)
 
 ### 登録画面
 
-![登録画面](images/add.png)
+![登録画面](images/members_add.png)
 
 ### 編集画面
 
-![編集画面](images/edit.png)
+![編集画面](images/members_edit.png)
 
 ---
 
